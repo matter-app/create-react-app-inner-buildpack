@@ -61,5 +61,5 @@ export_env_dir "$ENV_DIR" '^(REACT_APP_|NODE_|NPM_)'
 # Build the javascript bundle
 cd packages/matter-ui && npm run build
 cd ../..
-cd services/web-client && npm run build
+cd services/web-client && npm run build && mkdir -p ../../build && cp -avr build/. ../../build/
 
